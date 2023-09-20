@@ -33,7 +33,7 @@ async function handler(request: Request): Promise<Response> {
   }
 
   if (url.pathname === "/todos" && request.method === "GET") {
-    return new Response(renderToString(<TodoList todos={[]} />));
+    return new Response(renderToString(<TodoList todos={todos} />));
   }
 
   return new Response("not found", { status: 404 });
